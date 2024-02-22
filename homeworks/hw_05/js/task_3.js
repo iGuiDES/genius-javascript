@@ -24,16 +24,16 @@ const orange = {
     amount: 3.4
 }
 
-const shop = function() {
-    let totalCost = this.price * this.amount;
+const shop = function(product) {
+    let totalCost = product.price * product.amount;
 
-    return `Назва товару: "${this.name}".\nВартість товару: "${totalCost}" гривні.\n`;
+    return `Назва товару: "${product.name}".\nВартість товару: "${totalCost}" гривні.\n`;
 }
 
-const costBanana = shop.call(banana);
-const costCherry = shop.call(cherry);
-const costOrange = shop.call(orange);
+const costBanana = shop(banana);
+const costChery = shop(cherry);
+const costOrange = shop(orange);
 
 console.log(costBanana);
-console.log(costCherry);
+console.log(costChery);
 console.log(costOrange);
