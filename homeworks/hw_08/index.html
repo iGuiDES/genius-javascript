@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 8 - DOM</title>
+</head>
+<body>
+    <!--Напишіть код, щоб вибрати елемент з атрибутом data-widget-name з документа-->
+    <!--та прочитати його значення. -->
+    <div data-widget-name="menu">Виберіть жанр</div>
+    <script>
+        const getElem = document.querySelector('[data-widget-name]');
+
+        if (getElem) {
+            const getElemValue = getElem.getAttribute('data-widget-name');
+            console.log(`Значення атрибуту - "${getElemValue}"`);
+        } else {
+            console.log('Такого атрибуту немає на сторінці!');
+        }
+
+    </script>
+</body>
+</html>
